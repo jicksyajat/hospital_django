@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{%block content%}
+<h1> Our Doctors </h1>
+
+<div class="row" style="background-color: rgb(227, 231, 233);padding-top: 10px; padding-bottom: 10px;">
+    {% for i in doctors %}
+
+    <div class="column" style="width: 18rem; text-align: center;display: inline-block; margin-left:30px ;" >
+        <img src="{{ i.doc_image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            
+            <p class="card-text">DR.{{ i.doc_name}}</p>
+            <h6>{{ i.doc_spec}}</h6>
+            <!-- <h5>{{ i.dep_name}} department</h5> -->
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{%endblock%}

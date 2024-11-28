@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1  class="heading">department page</h1>
+
+
+<br>
+
+ {% for x in dept %}
+ <div style="text-align: center; margin-left: 200px; width: 70%; height: 10%; background-color: green;">
+ <h1 style="color: rgb(243, 240, 240); padding-top: 20px;">{{ x.dept_name }}</h1>
+ <p style="color: rgb(243, 240, 240); padding-top: 10px;">{{ x.dept_des }} </p>
+</div>
+{% endfor %} 
+{% endblock %}
